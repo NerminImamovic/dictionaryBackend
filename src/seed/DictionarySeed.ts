@@ -1,8 +1,7 @@
 import { IDictionaryService } from "../services/interfaces/IDictionaryService";
 import { DictionaryService } from "../services/DictionaryService";
-import { dictionaryRoutes } from "../routes/DictionaryRoutes";
 
-function seedDictionary() {
+function seedDictionary(): void {
 
     const dictionaryService: IDictionaryService = new DictionaryService();
 

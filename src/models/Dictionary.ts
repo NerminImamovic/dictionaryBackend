@@ -8,9 +8,9 @@ class Dictionary {
 
     private constructor() {
         this._words = new Graph();
-    };
+    }
 
-    public static getInstance() {
+    public static getInstance(): Dictionary {
         if (!Dictionary.instance) {
             Dictionary.instance = new Dictionary();
         }
