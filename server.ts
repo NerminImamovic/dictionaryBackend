@@ -18,8 +18,8 @@ server.use(cors());
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 
-server.use("/api/dictionary", dictionaryRoutes);
+server.use("/dictionary", dictionaryRoutes);
 
-server.listen(3000, function () {
-    console.log('Example app listening on port 3000!')
+server.listen(4000, function () {
+    console.log('Example app listening on port 4000!')
 });

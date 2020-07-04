@@ -18,9 +18,6 @@ dictionaryRoutes.get("/words", (req: Request, res: Response) => {
 dictionaryRoutes.get("/synonyms/:word", (req: Request, res: Response) => {
 
     const word: string = req.params.word;
-
-    console.log("Word " + JSON.stringify(word));
-
     const synonyms: string[] = dictionaryService.GetWordSynonyms(word);
 
     res.status(200).send(synonyms);
@@ -28,11 +25,7 @@ dictionaryRoutes.get("/synonyms/:word", (req: Request, res: Response) => {
 
 dictionaryRoutes.post("/createSynonyms", (req: Request, res: Response) => {
 
-    console.log("ovdje");
-
     const words: string[] = req.body.words;
-
-    console.log("Words " + JSON.stringify(words));
 
     if (_.size(words) === 1) {
         dictionaryService.CreateWord(words[0]);

@@ -5,7 +5,7 @@ function seedDictionary(): void {
 
     const dictionaryService: IDictionaryService = new DictionaryService();
 
-    console.log("DictionaryService " + JSON.stringify(dictionaryService));
+    console.log("Seeding Dictionary" + JSON.stringify(dictionaryService));
 
     dictionaryService.CreateWord("a");
     dictionaryService.CreateWord("b");
@@ -14,8 +14,6 @@ function seedDictionary(): void {
     dictionaryService.CreateSynonyms(["c", "b"]);
 
     const words: string[] = dictionaryService.GetAllWords();
-
-    console.log("Words " + JSON.stringify(words));
 }
 
 export { seedDictionary };
