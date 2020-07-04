@@ -12,8 +12,6 @@ function seedDictionary(): void {
 
     dictionaryService.CreateSynonyms(["a", "b"]);
     dictionaryService.CreateSynonyms(["c", "b"]);
-
-    const words: string[] = dictionaryService.GetAllWords();
 }
 
 export { seedDictionary };
