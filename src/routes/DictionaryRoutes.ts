@@ -4,17 +4,18 @@ import * as _ from "lodash";
 import { IDictionaryService } from "../services/interfaces/IDictionaryService";
 import { DictionaryService } from "../services/DictionaryService";
 
-
 const dictionaryService: IDictionaryService = new DictionaryService();
 
 const dictionaryRoutes = express.Router();
 
+// GET all words
 dictionaryRoutes.get("/words", (req: Request, res: Response) => {
     const words: string[] = dictionaryService.GetAllWords();
 
     res.status(200).send(words);
 });
 
+// GET syonynms for certain words
 dictionaryRoutes.get("/synonyms/:word", (req: Request, res: Response) => {
 
     const word: string = req.params.word;
@@ -23,6 +24,7 @@ dictionaryRoutes.get("/synonyms/:word", (req: Request, res: Response) => {
     res.status(200).send(synonyms);
 });
 
+// POST create Synonyms
 dictionaryRoutes.post("/createSynonyms", (req: Request, res: Response) => {
 
     const words: string[] = req.body.words;
