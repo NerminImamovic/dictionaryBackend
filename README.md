@@ -12,15 +12,10 @@ npm run build
 
 ### Start Server
 ```
-npm run serve
+npm run start
 ```
 
 ### Build Project & Start Server
-```
-npm run serve
-```
-
-### Lints and fixes files
 ```
 npm run dev
 ```
